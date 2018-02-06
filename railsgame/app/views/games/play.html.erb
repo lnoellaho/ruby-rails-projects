@@ -1,0 +1,12 @@
+<h1>Games#play</h1>
+<p>Find me in app/views/games/play.html.erb</p>
+
+<h1>Games</h1>
+Hey <%=@user.name%> (<%=@user.email%>)
+<hr/>
+Result: <%=@result%>
+<hr/>
+<form action="play" method="get">
+  <input type="number" name="user_guess" required />
+  <input type="submit" value="Play" />
+</form>
