@@ -1,0 +1,24 @@
+
+<div>
+  <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card-header"><%= @contact.firstname %> <%= @contact.lastname %></div>
+    <div class="card-body">
+      <h2 class="card-title"><%= @contact.firstname %> <%= @contact.lastname %></h2>
+        <h5>email: <%= @contact.email %></li>
+        <h5>phone: <%= @contact.phone %></li>
+    </div>
+    <div class="card-footer text-muted">
+      added
+      <%= (Time.zone.now - @contact.created_at).to_i/ 1.day %>
+      days ago
+    </div>
+
+  </div>
+  <hr class="my-4">
+  <div>
+    <%= link_to "Update", "/contacts/update/#{@contact.id}/form", class: 'btn btn-primary' %>
+    <%= link_to "Delete", "/contacts/delete/#{@contact.id}", class: 'btn btn-primary btn-sm' %>
+  </div>
+    <hr class="my-4">
+    <%= link_to "Back to List", "/", class: 'btn btn-outline-primary' %>
+</div>

@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
 
     if @contact.save
       cookies[:contact_id] = @contact.id
-       redirect_to '/contacts/getall' #update the render to be redirect to the play view
+       redirect_to '/' #update the render to be redirect to the play view
     else
       render 'contacts/index'
     end
@@ -20,4 +20,32 @@ class ContactsController < ApplicationController
   def getall
     @contacts = Contact.all
   end
+
+  def updateform
+    @contact = Contact.find(params[:id])
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+
+    @contact.update(
+      firstname: params[:first_name],
+      lastname: params[:last_name],
+      email: params[:email],
+      phone: params[:phone]
+    )
+    redirect_to "/contacts/#{@contact.id}"
+  end
+
+  def delete
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+
+    redirect_to '/'
+  end
+
+  def getone
+    @contact = Contact.find(params[:id])
+  end
+
 end

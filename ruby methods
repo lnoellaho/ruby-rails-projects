@@ -1,0 +1,111 @@
+####RUBY METHODS
+ to_s
+ to_i
+ to_f =to float
+
+##ARRAY
+
+#iterates over array, returns original object, or single thing if that's what you want
+array.each
+array.each_with_index |element, index|
+
+#iterates over array, returns new object (array)
+array.map
+
+#selects only the items in array that match the specified parameters and creates a new array
+array.select
+array.find_all
+
+#returns the first element in an array that fits the conditions
+array.find do |word|
+    word == "x"
+end
+
+
+#appends array
+array.push(0)
+array << 0
+
+#prepends array
+array.unshift(0)
+
+#takes one off the end
+array.pop
+
+#only selects the unique items in array
+arr.uniq
+arr.uniq! #modifies the calling object
+
+#takes all arrays inside an arry and puts them all in one array
+array.flatten
+
+#iterates over array and checks if the element is in the array
+array.include?(x)
+
+#converts all the elements in an array to a single strings separated by spaces
+array.join(" ")
+
+#iterates over every element of the array and returns true if the code block is EVER true. Methods in Ruby with question marks return true or false, and are called predicate methods
+array.any? do |word|
+    word == "x"
+end
+
+#returns true if the the code block is ALWAYS true
+array.all? do |word|
+    word == "x"
+end
+
+#reverses items in array
+array.reverse()
+
+##HASH
+
+#delete if |k, v|
+hash.delete_if
+
+#returns value that corresponds to the specified key
+hash.fetch(key)
+
+#returns an array of all the keys in a hash
+hash.keys()
+
+#returns an array of all the values in the hash
+hash.values()
+
+#used to find the key/value pair with the key equal to the specified conditions
+hash.select do |key, value|
+    key == "x"
+end
+
+##STRING
+
+#selects elements that start with s or w
+element.start_with?('s', 'w')
+
+#splits strings by space
+element.split
+
+#self-explanatory
+element.upcase()
+element.downcase()
+element.swapcase()
+
+#reverses all strings
+string.reverse()
+
+#splits strings into an array of each word as an item
+string.split()
+
+#checks if string contains the letter specified, returns true or false
+string.include?("x")
+
+##SYMBOL
+
+#returns a human readable representation of the object
+symbol.inspect()
+name = :symbol
+name.inspect()
+
+#checks is something is an instance of a class, ex:
+:id.instance_of?(Symbol)
+returns true
