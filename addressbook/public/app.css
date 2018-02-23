@@ -1,0 +1,60 @@
+.title {
+  text-align: center;
+  margin: 2%;
+}
+
+.addbutton {
+  text-align: center;
+}
+
+.list-group {
+  width: 600px;
+  margin: auto;
+}
+
+.contactcard {
+  margin: auto;
+  margin-top: 5rem;
+  max-width: 30rem;
+}
+
+.buttongroup {
+  text-align: center;
+}
+
+.update {
+  margin-bottom: 2rem;
+}
+
+.delete {
+
+}
+.backbutton {
+  text-align: center;
+}
+
+.createtitle {
+  text-align: center;
+  margin: 5%;
+}
+
+.createcard {
+  max-width: 25rem;
+  margin: auto;
+  border-color: #DF691A;
+}
+
+.formcard {
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.buttonform {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.inputi {
+  font-size: 20px;
+  width: 250px;
+}
